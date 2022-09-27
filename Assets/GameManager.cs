@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
 	//Runs when the player needs to be positioned back at the spawn point
 	public void PositionPlayer()
 	{
+    elapsedTime = 0;
 		player.transform.position = spawnPoint.position;
 		player.transform.rotation = spawnPoint.rotation;
 	}
