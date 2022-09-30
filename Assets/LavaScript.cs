@@ -12,18 +12,25 @@ public class LavaScript : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
     }
 
-    void Rise()
+    public void Rise()
     {
         rigidBody.velocity = new Vector3(0, 1f, 0);
     }
 
-    void Stop()
+    public void Stop()
     {
         rigidBody.velocity = new Vector3(0, 0, 0);
     }
 
-    void Reset()
+    public void Reset()
     {
         rigidBody.position = new Vector3(0, 0, 0);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        gameManager.PositionPlayer();
+        Stop();
+        Reset();
     }
 }
