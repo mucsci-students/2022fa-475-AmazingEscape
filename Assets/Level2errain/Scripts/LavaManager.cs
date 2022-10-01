@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 
-public class GameManager : MonoBehaviour
+public class LavaManager : MonoBehaviour
 {
     // Place holders to allow connecting to other objects
     public Transform spawnPoint;
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
         PositionPlayer();
 
-        lava.Stop();
+        //lava.Stop();
     }
 
 
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         // Move the player to the spawn point, and allow it to move.
         fpsController.enabled = true;
         PositionPlayer();
-        lava.Rise();
+        //lava.Rise();
     }
 
 
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
     {
         player.transform.position = spawnPoint.position;
         player.transform.rotation = spawnPoint.rotation;
-        lava.Reset();
+        //lava.Reset();
     }
 
 
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
         isRunning = false;
         isFinished = true;
         fpsController.enabled = false;
-        lava.Stop();
+        //lava.Stop();
     }
 
 
