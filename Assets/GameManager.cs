@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 	public Transform spawnPoint;
 	public GameObject player;
 
+	// For Level 2's Lava Mechanic
+	public LavaScript lava;
+
 	// Flags that control the state of the game
 	private float elapsedTime = 0;
 	private bool isRunning = false;
@@ -29,6 +32,7 @@ public class GameManager : MonoBehaviour
 		fpsController.enabled = false;
 
 		PositionPlayer();
+		lava.Reset();
 	}
 
 
@@ -42,6 +46,7 @@ public class GameManager : MonoBehaviour
 		// Move the player to the spawn point, and allow it to move.
 		fpsController.enabled = true;
 		PositionPlayer();
+		lava.Rise();
 	}
 
 
@@ -53,17 +58,12 @@ public class GameManager : MonoBehaviour
 		{
 			elapsedTime += Time.deltaTime;
 		}
-		if (Input.GetKeyDown(KeyCode.R))
-        {
-			PositionPlayer();
-        }
 	}
 
 
 	//Runs when the player needs to be positioned back at the spawn point
 	public void PositionPlayer()
 	{
-		elapsedTime = 0;
 		player.transform.position = spawnPoint.position;
 		player.transform.rotation = spawnPoint.rotation;
 	}
@@ -75,9 +75,10 @@ public class GameManager : MonoBehaviour
 		isRunning = false;
 		isFinished = true;
 		fpsController.enabled = false;
+		lava.Stop();
 	}
-	
-	
+
+
 	//This section creates the Graphical User Interface (GUI)
 	void OnGUI() {
 		
