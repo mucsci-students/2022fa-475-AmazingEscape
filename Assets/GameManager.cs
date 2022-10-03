@@ -114,13 +114,13 @@ public class GameManager : MonoBehaviour
 		if(isFinished)
 		{
 			GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
-			GUI.Label(new Rect(Screen.width / 2 - 10, 200, 20, 30), ((int)elapsedTime).ToString());
+			GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
 		}
 		else if(isRunning)
 		{ 
 			// If the game is running, show the current time
 			GUI.Box(new Rect(Screen.width / 2 - 65, Screen.height - 115, 130, 40), "Your Time Is");
-			GUI.Label(new Rect(Screen.width / 2 - 10, Screen.height - 100, 20, 30), ((int)elapsedTime).ToString());
+			GUI.Label(new Rect(Screen.width / 2 - 10, Screen.height - 100, 30, 30), ((int)elapsedTime).ToString());
 		}
 	}
 }
