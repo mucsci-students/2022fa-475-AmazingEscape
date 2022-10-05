@@ -200,8 +200,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147376157}
-  m_LocalRotation: {x: -0.22079755, y: 0.44240132, z: 0.11334372, w: 0.8617904}
-  m_LocalPosition: {x: -198.78476, y: -44.47818, z: -60.21358}
+  m_LocalRotation: {x: -0.1950106, y: 0.5568008, z: 0.13644221, w: 0.7958187}
+  m_LocalPosition: {x: -233.28584, y: -161.95665, z: -88.23316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -383,6 +383,54 @@ Skybox:
   m_GameObject: {fileID: 414485019}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 0}
+--- !u!1 &529061785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 529061787}
+  - component: {fileID: 529061786}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &529061786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529061785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4388b07bdd616e4fb71e9e3f5f7021e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 1030112735}
+  player: {fileID: 790822144}
+  level: 1
+  lava: {fileID: 0}
+--- !u!4 &529061787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529061785}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -216.62566, y: 152.85008, z: -82.15541}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,22 +530,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
   m_PrefabInstance: {fileID: 177039716}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &790822150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 790822144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4388b07bdd616e4fb71e9e3f5f7021e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 1030112735}
-  player: {fileID: 790822144}
-  level: 1
-  lava: {fileID: 0}
 --- !u!1001 &871546791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -611,7 +643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17ce50a5ef049c44b88709a5a9d5f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 790822150}
+  gameManager: {fileID: 0}
 --- !u!1001 &1305749667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -799,10 +831,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1366938038}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ea8c21cfb24e124baf37626a51f1e44, type: 3}
+  m_Script: {fileID: 11500000, guid: 73feb59560d75c8468ab83365290da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 790822150}
+  gameManager: {fileID: 529061786}
 --- !u!1001 &1616877830
 PrefabInstance:
   m_ObjectHideFlags: 0
