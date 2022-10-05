@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {	
 	// Place holders to allow connecting to other objects
 	public Transform spawnPoint;
 	public GameObject player;
+	public int level = 0;
 
 	// For Level 2's Lava Mechanic
 	public LavaScript lava;
@@ -32,7 +34,10 @@ public class GameManager : MonoBehaviour
 		fpsController.enabled = false;
 
 		PositionPlayer();
-		lava.Reset();
+		if (lava != null)
+		{
+			lava.Reset();
+		}
 	}
 
 
@@ -49,6 +54,14 @@ public class GameManager : MonoBehaviour
 		lava.Rise();
 	}
 
+	public void RestartLev1()
+	{
+		isRunning = false;
+		isFinished = true;
+		fpsController.enabled = false;
+		level = 1;
+	}
+
 
 	// Update is called once per frame
 	void Update ()
@@ -58,12 +71,17 @@ public class GameManager : MonoBehaviour
 		{
 			elapsedTime += Time.deltaTime;
 		}
+		if (Input.GetKeyDown(KeyCode.R))
+        {
+			PositionPlayer();
+        }
 	}
 
 
 	//Runs when the player needs to be positioned back at the spawn point
 	public void PositionPlayer()
 	{
+		elapsedTime = 0;
 		player.transform.position = spawnPoint.position;
 		player.transform.rotation = spawnPoint.rotation;
 	}
@@ -81,41 +99,80 @@ public class GameManager : MonoBehaviour
 
 	//This section creates the Graphical User Interface (GUI)
 	void OnGUI() {
-		
-		if(!isRunning)
-		{
-			string message;
 
+		if (level == (int)1)
+        {
+			if (elapsedTime < 35.0 && isFinished)
+			{
+				elapsedTime = 0;
+				GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
+				GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
+				Rect startButton = new Rect(Screen.width / 2 - 120, Screen.height / 2, 240, 30);
+				string message;
+				message = "Click to Play Again, or Press Enter to Move to Next Level";
+				if (GUI.Button(startButton, message))
+				{
+					SceneManager.LoadScene(sceneName: "Hallway Level");
+				}
+				if (Input.GetKeyDown(KeyCode.Return))
+				{
+					SceneManager.LoadScene(sceneName: "CityLevel");
+				}
+			}
+			else if (elapsedTime > 35.0 && isFinished)
+			{
+				string message;
+				message = "Click or Press Enter to Play Again, Time to Beat is 35 Seconds";
+				GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
+				GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
+				Rect startButton = new Rect(Screen.width / 2 - 120, Screen.height / 2, 240, 30);
+				if (GUI.Button(startButton, message) || Input.GetKeyDown(KeyCode.Return))
+				{
+					SceneManager.LoadScene(sceneName: "Hallway Level");
+				}
+			}
+		}
+		else if (level == 2)
+        {
+
+        }
+        else 
+		{ 
+			if(!isRunning)
+			{
+				string message;
+
+				if(isFinished)
+				{
+					message = "Click or Press Enter to Play Again";
+				}
+				else
+				{
+					message = "Click or Press Enter to Play";
+				}
+
+				//Define a new rectangle for the UI on the screen
+				Rect startButton = new Rect(Screen.width/2 - 120, Screen.height/2, 240, 30);
+
+				if (GUI.Button(startButton, message) || Input.GetKeyDown(KeyCode.Return))
+				{
+					//start the game if the user clicks to play
+					StartGame ();
+				}
+			}
+		
+			// If the player finished the game, show the final time
 			if(isFinished)
 			{
-				message = "Click or Press Enter to Play Again";
+				GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
+				GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
 			}
-			else
-			{
-				message = "Click or Press Enter to Play";
+			else if(isRunning)
+			{ 
+				// If the game is running, show the current time
+				GUI.Box(new Rect(Screen.width / 2 - 65, Screen.height - 115, 130, 40), "Your Time Is");
+				GUI.Label(new Rect(Screen.width / 2 - 10, Screen.height - 100, 30, 30), ((int)elapsedTime).ToString());
 			}
-
-			//Define a new rectangle for the UI on the screen
-			Rect startButton = new Rect(Screen.width/2 - 120, Screen.height/2, 240, 30);
-
-			if (GUI.Button(startButton, message) || Input.GetKeyDown(KeyCode.Return))
-			{
-				//start the game if the user clicks to play
-				StartGame ();
-			}
-		}
-		
-		// If the player finished the game, show the final time
-		if(isFinished)
-		{
-			GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
-			GUI.Label(new Rect(Screen.width / 2 - 10, 200, 20, 30), ((int)elapsedTime).ToString());
-		}
-		else if(isRunning)
-		{ 
-			// If the game is running, show the current time
-			GUI.Box(new Rect(Screen.width / 2 - 65, Screen.height - 115, 130, 40), "Your Time Is");
-			GUI.Label(new Rect(Screen.width / 2 - 10, Screen.height - 100, 20, 30), ((int)elapsedTime).ToString());
 		}
 	}
 }
