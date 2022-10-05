@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 		fpsController.enabled = false;
 
 		PositionPlayer();
-		if (lava != null)
+		if (level == 1 && lava != null)
 		{
 			lava.Reset();
 		}
@@ -51,7 +51,10 @@ public class GameManager : MonoBehaviour
 		// Move the player to the spawn point, and allow it to move.
 		fpsController.enabled = true;
 		PositionPlayer();
-		lava.Rise();
+		if (level == 1)
+        {
+			lava.Rise();
+		}
 	}
 
 	public void RestartLev1()
@@ -93,7 +96,10 @@ public class GameManager : MonoBehaviour
 		isRunning = false;
 		isFinished = true;
 		fpsController.enabled = false;
-		lava.Stop();
+		if (level == 1)
+		{
+			lava.Stop();
+		}
 	}
 
 
