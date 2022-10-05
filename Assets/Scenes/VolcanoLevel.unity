@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 147376159}
   - component: {fileID: 147376158}
   m_Layer: 0
-  m_Name: Water4AdvancedReflectionSceneCamera
+  m_Name: LavaReflectionSceneCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,13 +200,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147376157}
-  m_LocalRotation: {x: 0.2639038, y: 0.68856114, z: 0.3003377, w: -0.6050088}
-  m_LocalPosition: {x: 1189.0824, y: -1122.4832, z: 875.6503}
+  m_LocalRotation: {x: 0.14732084, y: -0.2237151, z: -0.034150656, w: -0.9628509}
+  m_LocalPosition: {x: -35.334732, y: -184.28609, z: -172.88078}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &177039716
 PrefabInstance:
@@ -221,7 +221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -237,7 +237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalRotation.x
@@ -245,7 +245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalRotation.z
@@ -257,7 +257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 414485020}
   - component: {fileID: 414485022}
   m_Layer: 0
-  m_Name: Water4AdvancedReflectionMain Camera
+  m_Name: LavaReflectionMain Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -372,7 +372,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!45 &414485022
 Skybox:
@@ -475,7 +475,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &790822144 stripped
 GameObject:
@@ -496,6 +496,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1030112735}
   player: {fileID: 790822144}
+  level: 0
+  lava: {fileID: 0}
 --- !u!1 &1030112734
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,14 +522,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030112734}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100, y: 55, z: 1530}
+  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: -234.2, y: 23.4, z: -62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!114 &1030112736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -584,8 +586,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 1, b: 0.067182064, a: 1}
-  m_Intensity: 40
+  m_Color: {r: 0, g: 1, b: 0.0666666, a: 1}
+  m_Intensity: 20
   m_Range: 100
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -643,12 +645,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366938038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 900, y: 202, z: 1990}
+  m_LocalPosition: {x: 487.9, y: 238.2, z: 556.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1366938042
 MonoBehaviour:
@@ -716,7 +718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5568117320890561005, guid: e238ba545d4b59a4bb5a0cbd9177882d, type: 3}
       propertyPath: m_Name
-      value: Terrain (1)
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 8295495169487125936, guid: e238ba545d4b59a4bb5a0cbd9177882d, type: 3}
       propertyPath: m_MaterialTemplate
@@ -735,7 +737,7 @@ GameObject:
   - component: {fileID: 1891679865}
   - component: {fileID: 1891679864}
   m_Layer: 0
-  m_Name: Water4AdvancedReflectionFirstPersonCharacter
+  m_Name: LavaReflectionFirstPersonCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -791,13 +793,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891679863}
-  m_LocalRotation: {x: 0.12647553, y: 0.7776251, z: 0.1657233, w: -0.59316015}
-  m_LocalPosition: {x: 872.78845, y: -286.14157, z: 1867.4506}
+  m_LocalRotation: {x: -0.10486204, y: 0.87740916, z: 0.41125178, w: 0.22367205}
+  m_LocalPosition: {x: -294.65396, y: -968.6592, z: 616.55194}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1924778702
 PrefabInstance:
@@ -808,7 +810,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100006, guid: 9f87526c7a3f1f94ba724d32d6f4406b, type: 3}
       propertyPath: m_Name
-      value: Water4Advanced
+      value: Lava
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 9f87526c7a3f1f94ba724d32d6f4406b, type: 3}
       propertyPath: m_RootOrder
@@ -864,60 +866,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f87526c7a3f1f94ba724d32d6f4406b, type: 3}
---- !u!1001 &8343525982996195348
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8343525982291006706, guid: a54ed12d728f5994ab3aef74ddd8eed4, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343525982291006706, guid: a54ed12d728f5994ab3aef74ddd8eed4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343525982291006706, guid: a54ed12d728f5994ab3aef74ddd8eed4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343525982291006706, guid: a54ed12d728f5994ab3aef74ddd8eed4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1074
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343525982291006706, guid: a54ed12d728f5994ab3aef74ddd8eed4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343525982291006706, guid: a54ed12d728f5994ab3aef74ddd8eed4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343525982291006706, guid: a54ed12d728f5994ab3aef74ddd8eed4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343525982291006706, guid: a54ed12d728f5994ab3aef74ddd8eed4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343525982291006706, guid: a54ed12d728f5994ab3aef74ddd8eed4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343525982291006706, guid: a54ed12d728f5994ab3aef74ddd8eed4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343525982291006706, guid: a54ed12d728f5994ab3aef74ddd8eed4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343525982291006711, guid: a54ed12d728f5994ab3aef74ddd8eed4, type: 3}
-      propertyPath: m_Name
-      value: Terrain
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a54ed12d728f5994ab3aef74ddd8eed4, type: 3}
