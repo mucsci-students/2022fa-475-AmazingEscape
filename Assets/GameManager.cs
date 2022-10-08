@@ -113,14 +113,14 @@ public class GameManager : MonoBehaviour
 
 	//This section creates the Graphical User Interface (GUI)
 	void OnGUI() {
-
+		int boxWidth = 400;
 		if (level == (int) 3)
         {
 			if (elapsedTime < 35.0 && isFinished)
 			{
 				GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
 				GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
-				Rect startButton = new Rect(Screen.width / 2 - 160, Screen.height / 2, 320, 30);
+				Rect startButton = new Rect(Screen.width / 2 - (boxWidth / 2), Screen.height / 2, boxWidth, 30);
 				string message;
 				message = "Click to Play Again, or Press Enter to Move to Next Level";
 				if (GUI.Button(startButton, message))
@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
 				message = "Click or Press Enter to Play Again, Time to Beat is 35 Seconds";
 				GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
 				GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
-				Rect startButton = new Rect(Screen.width / 2 - 160, Screen.height / 2, 320, 30);
+				Rect startButton = new Rect(Screen.width / 2 - (boxWidth / 2), Screen.height / 2, boxWidth, 30);
 				if (GUI.Button(startButton, message) || Input.GetKeyDown(KeyCode.Return))
 				{
 					SceneManager.LoadScene(sceneName: "Hallway Level");
@@ -151,7 +151,7 @@ public class GameManager : MonoBehaviour
 			{
 				GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
 				GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
-				Rect startButton = new Rect(Screen.width / 2 - 160, Screen.height / 2, 320, 30);
+				Rect startButton = new Rect(Screen.width / 2 - (boxWidth / 2), Screen.height / 2, boxWidth, 30);
 				string message;
 				message = "Click to Play Again, or Press Enter to Move to Next Level";
 				if (GUI.Button(startButton, message))
@@ -169,7 +169,7 @@ public class GameManager : MonoBehaviour
 				message = "Click or Press Enter to Play Again, Time to Beat is 35 Seconds";
 				GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
 				GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
-				Rect startButton = new Rect(Screen.width / 2 - 160, Screen.height / 2, 320, 30);
+				Rect startButton = new Rect(Screen.width / 2 - (boxWidth / 2), Screen.height / 2, boxWidth, 30);
 				if (GUI.Button(startButton, message) || Input.GetKeyDown(KeyCode.Return))
 				{
 					SceneManager.LoadScene(sceneName: "Hallway Level");
