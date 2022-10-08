@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class MoveTowardsLev1 : MonoBehaviour
+public class MoveTowardsLev3 : MonoBehaviour
 {
 
     public GameManager GameManager;
