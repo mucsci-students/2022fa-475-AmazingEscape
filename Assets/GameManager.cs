@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
 	// Flags that control the state of the game
 	private float elapsedTime = 0;
-	private bool isRunning = false;
+	public bool isRunning = false;
 	private bool isFinished = false;
 
 	// So that we can access the player's controller from this script
@@ -128,7 +128,7 @@ public class GameManager : MonoBehaviour
         {
 			Cursor.visible = true;
 			Cursor.lockState = CursorLockMode.None;
-			if (elapsedTime < 35.0 && isFinished)
+			if (elapsedTime < 51.0 && isFinished)
 			{
 				GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
 				GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
@@ -144,10 +144,10 @@ public class GameManager : MonoBehaviour
 					SceneManager.LoadScene(sceneName: "VolcanoLevel");
 				}
 			}
-			else if (elapsedTime > 35.0 && isFinished)
+			else if (elapsedTime > 51.0 && isFinished)
 			{
 				string message;
-				message = "Click or Press Enter to Play Again, Time to Beat is 35 Seconds";
+				message = "Click or Press Enter to Play Again, Time to Beat is 50 Seconds";
 				GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
 				GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
 				Rect startButton = new Rect(Screen.width / 2 - (boxWidth / 2), Screen.height / 2, boxWidth, 30);
@@ -177,7 +177,7 @@ public class GameManager : MonoBehaviour
 					SceneManager.LoadScene(sceneName: "CityLevel");
 				}
 			}
-			else if (elapsedTime > 35.0 && isFinished)
+			else if (elapsedTime > 120.0 && isFinished)
 			{
 				string message;
 				message = "Click or Press Enter to Play Again, Time to Beat is 120 Seconds";
@@ -186,7 +186,7 @@ public class GameManager : MonoBehaviour
 				Rect startButton = new Rect(Screen.width / 2 - (boxWidth / 2), Screen.height / 2, boxWidth, 30);
 				if (GUI.Button(startButton, message) || Input.GetKeyDown(KeyCode.Return))
 				{
-					SceneManager.LoadScene(sceneName: "Hallway Level");
+					SceneManager.LoadScene(sceneName: "VolcanoLevel");
 				}
 			}
 		}
@@ -194,7 +194,7 @@ public class GameManager : MonoBehaviour
 		{
 			Cursor.visible = true;
 			Cursor.lockState = CursorLockMode.None;
-			if (elapsedTime < 80 && isFinished)
+			if (elapsedTime < 80.0 && isFinished)
 			{
 				GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
 				GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
@@ -210,7 +210,7 @@ public class GameManager : MonoBehaviour
 					SceneManager.LoadScene(sceneName: "CreditsScene");
 				}
 			}
-			else if (elapsedTime > 35.0 && isFinished)
+			else if (elapsedTime > 80.0 && isFinished)
 			{
 				string message;
 				message = "Click or Press Enter to Play Again, Time to Beat is 80 Seconds";

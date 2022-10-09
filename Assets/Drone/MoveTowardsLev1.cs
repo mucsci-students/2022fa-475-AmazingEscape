@@ -21,12 +21,15 @@ public class MoveTowardsLev1 : MonoBehaviour
 
     void Update()
     {
-        transform.LookAt(Player);
-
-        if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+        if (GameManager.isRunning)
         {
-            transform.position += Vector3.Scale(transform.forward * MoveSpeed * Time.deltaTime, new Vector3(1.0f, 0.0f, 1.0f));
+            transform.LookAt(Player);
 
+            if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+            {
+                transform.position += Vector3.Scale(transform.forward * MoveSpeed * Time.deltaTime, new Vector3(1.0f, 0.0f, 1.0f));
+
+            }
         }
     }
 
