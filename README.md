@@ -8,8 +8,14 @@ git clone https://github.com/mucsci-students/2022fa-475-AmazingEscape
 ```
 
 ### Windows
-2. Navigate to the game's main directory 
-3. Run the executable named Amazing Racer.exe
+2. Navigate the WindowsBuild folder inside the game's main directory 
+```
+cd 2022fa-475-AmazingEscape/WindowsBuild
+```
+3. Run the executable named AmazingEscape.exe
+```
+start AmazingEscape.exe
+```
 4. Enjoy and thank you for playing!
 
 ### Mac (TODO)
