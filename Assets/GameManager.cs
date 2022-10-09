@@ -73,6 +73,14 @@ public class GameManager : MonoBehaviour
 		level = 4;
 	}
 
+	public void RestartLev3()
+	{
+		isRunning = false;
+		isFinished = true;
+		fpsController.enabled = false;
+		level = 5;
+	}
+
 
 	// Update is called once per frame
 	void Update ()
@@ -166,13 +174,44 @@ public class GameManager : MonoBehaviour
 			else if (elapsedTime > 35.0 && isFinished)
 			{
 				string message;
-				message = "Click or Press Enter to Play Again, Time to Beat is 35 Seconds";
+				message = "Click or Press Enter to Play Again, Time to Beat is 120 Seconds";
 				GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
 				GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
 				Rect startButton = new Rect(Screen.width / 2 - (boxWidth / 2), Screen.height / 2, boxWidth, 30);
 				if (GUI.Button(startButton, message) || Input.GetKeyDown(KeyCode.Return))
 				{
 					SceneManager.LoadScene(sceneName: "Hallway Level");
+				}
+			}
+		}
+		else if (level == (int) 5)
+		{
+			if (elapsedTime < 80 && isFinished)
+			{
+				GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
+				GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
+				Rect startButton = new Rect(Screen.width / 2 - (boxWidth / 2), Screen.height / 2, boxWidth, 30);
+				string message;
+				message = "Click to Play Again, or Press Enter to Move to Credits";
+				if (GUI.Button(startButton, message))
+				{
+					SceneManager.LoadScene(sceneName: "CityLevel");
+				}
+				if (Input.GetKeyDown(KeyCode.Return))
+				{
+					SceneManager.LoadScene(sceneName: "CreditsScene");
+				}
+			}
+			else if (elapsedTime > 35.0 && isFinished)
+			{
+				string message;
+				message = "Click or Press Enter to Play Again, Time to Beat is 80 Seconds";
+				GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
+				GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
+				Rect startButton = new Rect(Screen.width / 2 - (boxWidth / 2), Screen.height / 2, boxWidth, 30);
+				if (GUI.Button(startButton, message) || Input.GetKeyDown(KeyCode.Return))
+				{
+					SceneManager.LoadScene(sceneName: "CityLevel");
 				}
 			}
 		}

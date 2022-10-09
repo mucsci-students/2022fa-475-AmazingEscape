@@ -4202,8 +4202,8 @@ GameObject:
   m_Component:
   - component: {fileID: 530134225}
   - component: {fileID: 530134228}
-  - component: {fileID: 530134227}
   - component: {fileID: 530134226}
+  - component: {fileID: 530134229}
   m_Layer: 0
   m_Name: Finish
   m_TagString: Untagged
@@ -4239,19 +4239,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &530134227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 530134224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ea8c21cfb24e124baf37626a51f1e44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 1188074798}
 --- !u!108 &530134228
 Light:
   m_ObjectHideFlags: 0
@@ -4314,6 +4301,19 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &530134229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530134224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5390873dba752428870667cbf6a992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 1188074798}
 --- !u!1001 &533743941
 PrefabInstance:
   m_ObjectHideFlags: 0
