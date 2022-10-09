@@ -9,9 +9,6 @@ public class GameManager : MonoBehaviour
 	public GameObject player;
 	public int level = 0;
 
-	// For Level 2's Lava Mechanic
-	public LavaScript lava;
-
 	// Flags that control the state of the game
 	private float elapsedTime = 0;
 	public bool isRunning = false;
@@ -36,10 +33,6 @@ public class GameManager : MonoBehaviour
 		fpsController.enabled = false;
 
 		PositionPlayer();
-		if (level == 1 && lava != null)
-		{
-			lava.Reset();
-		}
 	}
 
 
@@ -53,10 +46,6 @@ public class GameManager : MonoBehaviour
 		// Move the player to the spawn point, and allow it to move.
 		fpsController.enabled = true;
 		PositionPlayer();
-		if (level == 1)
-        {
-			lava.Rise();
-		}
 	}
 
 	public void RestartLev1()
@@ -120,10 +109,6 @@ public class GameManager : MonoBehaviour
 		isRunning = false;
 		isFinished = true;
 		fpsController.enabled = false;
-		if (level == 1)
-		{
-			lava.Stop();
-		}
 	}
 
 

@@ -8,7 +8,7 @@ public class MoveTowardsLev2 : MonoBehaviour
 
     public GameManager GameManager;
     public Transform Player;
-    int MoveSpeed = 4;
+    int MoveSpeed = 7;
     int MinDist = 0;
 
 
@@ -21,20 +21,24 @@ public class MoveTowardsLev2 : MonoBehaviour
 
     void Update()
     {
-        transform.LookAt(Player);
-
-        if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+        
+        if (GameManager.isRunning)
         {
+            transform.LookAt(Player);
 
-            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+            if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+            {
+                transform.position += transform.forward * MoveSpeed * Time.deltaTime;
 
+            }
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
         GameObject collidedWith = GetComponent<Collider>().gameObject;
-        if (collidedWith.tag == gameObject.tag)
+        Debug.Log(other.tag);
+        if (other.tag.Equals("Player"))
         {
             SceneManager.LoadScene(sceneName: "VolcanoLevel");
         }
