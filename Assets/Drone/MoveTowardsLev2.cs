@@ -37,7 +37,6 @@ public class MoveTowardsLev2 : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         GameObject collidedWith = GetComponent<Collider>().gameObject;
-        Debug.Log(other.tag);
         if (other.tag.Equals("Player"))
         {
             SceneManager.LoadScene(sceneName: "VolcanoLevel");
