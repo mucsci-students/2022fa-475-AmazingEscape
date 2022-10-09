@@ -25,8 +25,7 @@ public class MoveTowardsLev1 : MonoBehaviour
 
         if (Vector3.Distance(transform.position, Player.position) >= MinDist)
         {
-
-            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+            transform.position += Vector3.Scale(transform.forward * MoveSpeed * Time.deltaTime, new Vector3(1.0f, 0.0f, 1.0f));
 
         }
     }
