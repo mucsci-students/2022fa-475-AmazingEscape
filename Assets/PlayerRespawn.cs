@@ -10,6 +10,6 @@ public class PlayerRespawn : MonoBehaviour
 	void OnTriggerEnter(Collider other)
 	{
 		// Moves the player to the spawn point
-		gameManager.PositionPlayer();
+		gameManager.ResetLevel();
 	}
 }
