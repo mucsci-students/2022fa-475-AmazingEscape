@@ -38,3 +38,8 @@ Can also be found in the menu
 - Industrial Catwalk Kit - (https://assetstore.unity.com/packages/3d/environments/industrial/industrial-catwalk-kit-146383)
 - Realistic Tree 9 [Rainbow Tree] - (https://assetstore.unity.com/packages/3d/vegetation/trees/realistic-tree-9-rainbow-tree-54622)
 - Standard Assets (for Unity 2018.4) - (https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2018-4-32351)
+- LightBulb - (https://assetstore.unity.com/packages/3d/props/interior/lightbulb-218258)
+- Texture Pack Bricks 'n Blocks - (https://assetstore.unity.com/packages/2d/textures-materials/texture-pack-bricks-n-blocks-180041)
+- Zombie - (https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232)
+- Simple Drone - (https://assetstore.unity.com/packages/3d/vehicles/air/simple-drone-190684)
+- Stylized Wood Textures - (https://assetstore.unity.com/packages/2d/textures-materials/wood/stylized-wood-textures-213607)
