@@ -8,8 +8,9 @@ public class MoveTowardsLev3 : MonoBehaviour
 
     public GameManager GameManager;
     public Transform Player;
-    int MoveSpeed = 4;
+    float MoveSpeed = 2.75f;
     int MinDist = 0;
+    int MaxDist = 20;
 
 
 
@@ -21,6 +22,13 @@ public class MoveTowardsLev3 : MonoBehaviour
 
     void Update()
     {
+
+        if (Vector3.Distance(transform.position, Player.position) >= MaxDist)
+        {
+            return;
+        }
+            
+
         transform.LookAt(Player);
 
         if (Vector3.Distance(transform.position, Player.position) >= MinDist)
