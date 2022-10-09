@@ -13,8 +13,8 @@ public class LevelManager : MonoBehaviour
 
     public void loadScene()
     {
-        DontDestroyOnLoad (canvas);
-        DontDestroyOnLoad (eventSystems);
+        //DontDestroyOnLoad (canvas);
+        //DontDestroyOnLoad (eventSystems);
         SceneManager.LoadScene(sceneName: "Hallway Level");
         mainMenu.SetActive(false);
         backgroundImg.SetActive(false);

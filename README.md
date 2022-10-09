@@ -24,6 +24,7 @@ Can also be found in the menu
 - Jump - Space Bar
 - Camera Movement - Mouse
 - Respawn/Reset Scene - R
+- Pause Game - Escape
 
 ## Credits
 

@@ -12,7 +12,7 @@ public class MenuManagerScript : MonoBehaviour
         mainMenu.SetActive(true);
         aboutMenu.SetActive(false);
         settingsMenu.SetActive(false);
-        DontDestroyOnLoad (canvas);
+        //DontDestroyOnLoad (canvas);
     }
 
     public void Back() 
