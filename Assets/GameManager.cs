@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
 		//Tell Unity to allow character controllers to have their position set directly. This will enable our respawn to work
 		Physics.autoSyncTransforms = true;
 
+		Cursor.visible = false;
+
 		// Finds the First Person Controller script on the Player
 		fpsController = player.GetComponent<FirstPersonController> ();
 	
@@ -124,6 +126,8 @@ public class GameManager : MonoBehaviour
 		int boxWidth = 400;
 		if (level == (int) 3)
         {
+			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
 			if (elapsedTime < 35.0 && isFinished)
 			{
 				GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
@@ -155,6 +159,8 @@ public class GameManager : MonoBehaviour
 		}
 		else if (level == (int) 4)
 		{
+			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
 			if (elapsedTime < 120.0 && isFinished)
 			{
 				GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
@@ -186,6 +192,8 @@ public class GameManager : MonoBehaviour
 		}
 		else if (level == (int) 5)
 		{
+			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
 			if (elapsedTime < 80 && isFinished)
 			{
 				GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
@@ -220,8 +228,9 @@ public class GameManager : MonoBehaviour
 			if (!isRunning)
 			{
 				string message;
-
-				if(isFinished)
+				Cursor.visible = true;
+				Cursor.lockState = CursorLockMode.None;
+				if (isFinished)
 				{
 					message = "Click or Press Enter to Play Again";
 				}
@@ -247,7 +256,9 @@ public class GameManager : MonoBehaviour
 				GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
 			}
 			else if(isRunning)
-			{ 
+			{
+				Cursor.visible = false;
+				Cursor.lockState = CursorLockMode.Locked;
 				// If the game is running, show the current time
 				GUI.Box(new Rect(Screen.width / 2 - 65, Screen.height - 115, 130, 40), "Your Time Is");
 				GUI.Label(new Rect(Screen.width / 2 - 10, Screen.height - 100, 30, 30), ((int)elapsedTime).ToString());
