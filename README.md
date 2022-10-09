@@ -43,3 +43,4 @@ Can also be found in the menu
 - Zombie - (https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232)
 - Simple Drone - (https://assetstore.unity.com/packages/3d/vehicles/air/simple-drone-190684)
 - Stylized Wood Textures - (https://assetstore.unity.com/packages/2d/textures-materials/wood/stylized-wood-textures-213607)
+- Skybox Series Free - (https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633)
