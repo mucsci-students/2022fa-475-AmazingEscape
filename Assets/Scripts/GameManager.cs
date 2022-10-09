@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 	private bool isPaused = false;
 	public GameObject PauseMenu;
 
+	private LevelSelectManager levelSelect;
+
 
 	// Use this for initialization
 	void Start ()
@@ -36,6 +38,8 @@ public class GameManager : MonoBehaviour
 		fpsController.enabled = false;
 
 		PositionPlayer();
+
+		levelSelect = FindObjectsOfType<LevelSelectManager>()[0];
 	}
 
 
@@ -162,8 +166,13 @@ public class GameManager : MonoBehaviour
 			{
 				Cursor.visible = true;
 				Cursor.lockState = CursorLockMode.None;
+				if (levelSelect.level1Time == -1 || elapsedTime < levelSelect.level1Time)
+                {
+					levelSelect.level1Time = elapsedTime;
+				}
 				if (elapsedTime < 51.0 && isFinished)
 				{
+					levelSelect.level1 = true;
 					GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
 					GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
 					Rect startButton = new Rect(Screen.width / 2 - (boxWidth / 2), Screen.height / 2, boxWidth, 30);
@@ -195,8 +204,13 @@ public class GameManager : MonoBehaviour
 			{
 				Cursor.visible = true;
 				Cursor.lockState = CursorLockMode.None;
+				if (levelSelect.level2Time == -1 || elapsedTime < levelSelect.level2Time)
+				{
+					levelSelect.level2Time = elapsedTime;
+				}
 				if (elapsedTime < 120.0 && isFinished)
 				{
+					levelSelect.level2 = true;
 					GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
 					GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
 					Rect startButton = new Rect(Screen.width / 2 - (boxWidth / 2), Screen.height / 2, boxWidth, 30);
@@ -228,8 +242,13 @@ public class GameManager : MonoBehaviour
 			{
 				Cursor.visible = true;
 				Cursor.lockState = CursorLockMode.None;
+				if (levelSelect.level3Time == -1 || elapsedTime < levelSelect.level3Time)
+				{
+					levelSelect.level3Time = elapsedTime;
+				}
 				if (elapsedTime < 80.0 && isFinished)
 				{
+					levelSelect.level3 = true;
 					GUI.Box(new Rect(Screen.width / 2 - 65, 185, 130, 40), "Your Time Was");
 					GUI.Label(new Rect(Screen.width / 2 - 10, 200, 30, 30), ((int)elapsedTime).ToString());
 					Rect startButton = new Rect(Screen.width / 2 - (boxWidth / 2), Screen.height / 2, boxWidth, 30);

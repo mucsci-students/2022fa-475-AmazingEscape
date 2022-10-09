@@ -19,4 +19,22 @@ public class LevelManager : MonoBehaviour
         mainMenu.SetActive(false);
         backgroundImg.SetActive(false);
     }
+
+    public void loadLevel2()
+    {
+        //DontDestroyOnLoad (canvas);
+        //DontDestroyOnLoad (eventSystems);
+        SceneManager.LoadScene(sceneName: "VolcanoLevel");
+        mainMenu.SetActive(false);
+        backgroundImg.SetActive(false);
+    }
+
+    public void loadLevel3()
+    {
+        //DontDestroyOnLoad (canvas);
+        //DontDestroyOnLoad (eventSystems);
+        SceneManager.LoadScene(sceneName: "City Level");
+        mainMenu.SetActive(false);
+        backgroundImg.SetActive(false);
+    }
 }
