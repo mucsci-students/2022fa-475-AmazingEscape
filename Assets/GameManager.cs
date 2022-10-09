@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
 		}
 		if (Input.GetKeyDown(KeyCode.R))
         {
-			PositionPlayer();
+			ResetLevel();
         }
 	}
 
@@ -105,6 +105,12 @@ public class GameManager : MonoBehaviour
 		elapsedTime = 0;
 		player.transform.position = spawnPoint.position;
 		player.transform.rotation = spawnPoint.rotation;
+	}
+
+	//Runs when the player needs to be positioned back at the spawn point
+	public void ResetLevel()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
 
