@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!243 &-6188205560284936370
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footstep
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: cd5a9d28dac22004aa3a65be538de8f9
+  m_Children: []
+  m_Volume: 6f6b0b849c6310d4896dd8b2172bd289
+  m_Pitch: 38b14ad02ece0be41b044e4d89737a5a
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -1348202216589936939}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &-3382587429801308919
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -19,6 +38,20 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &-1348202216589936939
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: f60f237ff50bed74dabb53aebc77b529
+  m_EffectName: Attenuation
+  m_MixLevel: 05f4c9d6a8b7a27438e77def933d77ff
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &-772522076872680846
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -76,6 +109,7 @@ AudioMixerController:
     - 819ed3b88dfe02e4a8edad9dc1440d9f
     - 5af3c79804e081449a51ccc8d9493a79
     - e066989662a521048b73a93e69b6be8f
+    - cd5a9d28dac22004aa3a65be538de8f9
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -92,6 +126,7 @@ AudioMixerGroupController:
   - {fileID: 2109507664190029668}
   - {fileID: -3382587429801308919}
   - {fileID: -205895476473128300}
+  - {fileID: -6188205560284936370}
   m_Volume: 6e477318ea2716541a05791614b0b7ec
   m_Pitch: 3990be308c21eae40b9cb2ae3b44c5c0
   m_Send: 00000000000000000000000000000000
@@ -125,7 +160,8 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: d81cbd281e86dce478fe6d566f5aa308
   m_FloatValues:
-    d5f2b0c5475094c4d9de5e9d51e8885a: -0.08374829
+    6f6b0b849c6310d4896dd8b2172bd289: -14.816608
+    d5f2b0c5475094c4d9de5e9d51e8885a: -20.09816
     0618b5560519c29408cc160f8a5cabb3: -7.436929
     6e477318ea2716541a05791614b0b7ec: -4.9356413
     2f3e039b55eb5994eac9731164751fcc: 12.587965
