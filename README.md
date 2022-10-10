@@ -4,7 +4,9 @@ A 3D time based racing/parkour game inspired by Amazing Racer from the 'Unity Ga
 ## Downloading
 1. Run the command below in a terminal
 ```
-git clone https://github.com/mucsci-students/2022fa-475-AmazingEscape
+Download the game zip file from google drive
+Windows : https://drive.google.com/file/d/1n0zyXuZ7BMSvnER5DFzePhXAkPyNm6Mp/view?usp=sharing
+Mac : https://drive.google.com/file/d/102auw4VBnnHXWCswQvfBC72bh_2dV6sP/view?usp=sharing
 ```
 
 ### Windows
