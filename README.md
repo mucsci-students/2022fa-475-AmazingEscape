@@ -2,28 +2,37 @@
 A 3D time based racing/parkour game inspired by Amazing Racer from the 'Unity Game Development in 24 Hours' book. First game created in the Fall 2022 Game Development course.
 
 ## Downloading
-1. Run the command below in a terminal
-```
-Download the game zip file from google drive
+1. Download the game zip file from google drive
+
 Windows : https://drive.google.com/file/d/1n0zyXuZ7BMSvnER5DFzePhXAkPyNm6Mp/view?usp=sharing
+
 Mac : https://drive.google.com/file/d/102auw4VBnnHXWCswQvfBC72bh_2dV6sP/view?usp=sharing
-```
 
 ### Windows
-2. Navigate the WindowsBuild folder inside the game's main directory 
-```
-cd 2022fa-475-AmazingEscape/WindowsBuild
-```
+2. Navigate to the folder you downloaded Amazing Escape to.
+
 3. Run the executable named AmazingEscape.exe
-```
-start AmazingEscape.exe
-```
+
 4. Enjoy and thank you for playing!
 
-### Mac (TODO)
-2. (TODO)
-3. (TODO)
-4. Enjoy and thank you for playing!
+### Mac
+2. Enter the directory you downloaded the zip into (most likely Downloads)
+```
+cd Downloads
+```
+3. Enter the AmazingRacer.app/Contents/MacOS/ folder with the command below
+```
+cd AmazingRacer.app/Contents/MacOS/
+```
+4. Give the file executable permissions with the command below
+```
+chmod 755 AmazingEscape 
+```
+5. Run the game with the command below
+```
+./AmazingEscape
+```
+6. Enjoy and thank you for playing!
 
 ## Controls
 Can also be found in the menu
@@ -53,3 +62,8 @@ Can also be found in the menu
 - Simple Drone - (https://assetstore.unity.com/packages/3d/vehicles/air/simple-drone-190684)
 - Stylized Wood Textures - (https://assetstore.unity.com/packages/2d/textures-materials/wood/stylized-wood-textures-213607)
 - Skybox Series Free - (https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633)
+- Free Rocks - (https://assetstore.unity.com/packages/3d/environments/landscapes/free-rocks-19288)
+- Music - (Winter - Vivaldi
+            Creative Commons ► Attribution 3.0 Unported ► CC BY 3.0
+            https://creativecommons.org/licenses/by/3.0
+            Downloaded from https://pmmusic.pro/downloads/)
