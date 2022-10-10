@@ -9,14 +9,10 @@ Windows : https://drive.google.com/file/d/1n0zyXuZ7BMSvnER5DFzePhXAkPyNm6Mp/view
 Mac : https://drive.google.com/file/d/102auw4VBnnHXWCswQvfBC72bh_2dV6sP/view?usp=sharing
 
 ### Windows
-2. Navigate the WindowsBuild folder inside the game's main directory 
-```
-cd 2022fa-475-AmazingEscape/WindowsBuild
-```
+2. Navigate to the folder you downloaded Amazing Escape to.
+
 3. Run the executable named AmazingEscape.exe
-```
-start AmazingEscape.exe
-```
+
 4. Enjoy and thank you for playing!
 
 ### Mac
